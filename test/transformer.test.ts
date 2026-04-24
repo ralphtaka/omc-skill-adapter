@@ -79,4 +79,15 @@ describe('renderSkillFile', () => {
     const rendered = renderSkillFile(skill);
     expect(rendered).toContain('\\"hello\\"');
   });
+
+  it('escapes backslashes and control chars in frontmatter strings', () => {
+    const meta = { name: 'test', description: 'path C:\\temp\\foo\nnext line' };
+    const skill = buildGeneratedSkill(meta, 'body', '/o\\src.md', 'src', 'p', {
+      test: ['C:\\run\\now'],
+    });
+    const rendered = renderSkillFile(skill);
+    expect(rendered).toContain('description: "path C:\\\\temp\\\\foo\\nnext line"');
+    expect(rendered).toContain('  - "C:\\\\run\\\\now"');
+    expect(rendered).toContain('adapter_origin_path: "/o\\\\src.md"');
+  });
 });

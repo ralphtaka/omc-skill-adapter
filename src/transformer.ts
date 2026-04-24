@@ -2,6 +2,35 @@ import type { ExternalSkillMeta, TriggerMap, GeneratedSkill, AdapterMarker } fro
 
 const MAX_BODY_CHARS = 4000;
 
+function escapeYamlDoubleQuoted(value: string): string {
+  return value.replace(/[\u0000-\u001f\u007f"\\]/g, (ch) => {
+    switch (ch) {
+      case '\\':
+        return '\\\\';
+      case '"':
+        return '\\"';
+      case '\n':
+        return '\\n';
+      case '\r':
+        return '\\r';
+      case '\t':
+        return '\\t';
+      case '\b':
+        return '\\b';
+      case '\f':
+        return '\\f';
+      default: {
+        const hex = ch.charCodeAt(0).toString(16).padStart(2, '0');
+        return `\\x${hex}`;
+      }
+    }
+  });
+}
+
+function yamlQuoted(value: string): string {
+  return `"${escapeYamlDoubleQuoted(value)}"`;
+}
+
 export function slugify(name: string): string {
   return name.toLowerCase().replace(/\s+/g, '-').replace(/[^a-z0-9-]/g, '');
 }
@@ -72,23 +101,23 @@ export function buildGeneratedSkill(
 }
 
 export function renderSkillFile(skill: GeneratedSkill): string {
-  const triggersYaml = skill.triggers.map(t => `  - "${t}"`).join('\n');
-  const tagsYaml = skill.tags.map(t => `  - "${t}"`).join('\n');
+  const triggersYaml = skill.triggers.map(t => `  - ${yamlQuoted(t)}`).join('\n');
+  const tagsYaml = skill.tags.map(t => `  - ${yamlQuoted(t)}`).join('\n');
 
   return [
     '---',
-    `id: "${skill.prefixedId}"`,
-    `name: "${skill.name}"`,
-    `description: "${skill.description.replace(/"/g, '\\"')}"`,
+    `id: ${yamlQuoted(skill.prefixedId)}`,
+    `name: ${yamlQuoted(skill.name)}`,
+    `description: ${yamlQuoted(skill.description)}`,
     `source: manual`,
     `triggers:`,
     triggersYaml,
     `tags:`,
     tagsYaml,
-    `adapter_source: "${skill.marker.source}"`,
-    `adapter_origin_path: "${skill.marker.originPath}"`,
-    `adapter_origin_skill: "${skill.marker.originSkill}"`,
-    `adapter_generated_at: "${skill.marker.generatedAt}"`,
+    `adapter_source: ${yamlQuoted(skill.marker.source)}`,
+    `adapter_origin_path: ${yamlQuoted(skill.marker.originPath)}`,
+    `adapter_origin_skill: ${yamlQuoted(skill.marker.originSkill)}`,
+    `adapter_generated_at: ${yamlQuoted(skill.marker.generatedAt)}`,
     '---',
     '',
     skill.body,
