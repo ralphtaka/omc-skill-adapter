@@ -1,0 +1,24 @@
+{
+  "name": "omc-skill-adapter",
+  "version": "0.1.0",
+  "description": "Bridges external skill collections into OMC skill loader — zero runtime dependencies",
+  "type": "module",
+  "bin": {
+    "omc-skill-adapter": "./dist/omc-skill-adapter.mjs"
+  },
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.0.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.6.0",
+    "vitest": "^2.1.0"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  }
+}

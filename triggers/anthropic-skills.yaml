@@ -1,0 +1,10 @@
+# Trigger overrides for anthropic-skills (official Claude Code plugin)
+# Populate with skill slugs once plugin contents are explored.
+# Run: ls ~/.claude/plugins/cache/claude-plugins-official/ to find skill names.
+#
+# Example format:
+# skill-name:
+#   - trigger keyword one
+#   - trigger keyword two
+
+# Add entries below as needed:

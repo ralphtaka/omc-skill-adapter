@@ -1,0 +1,19 @@
+# omc-skill-adapter sources configuration
+# Place this file at ~/.omc/skill-sources.yaml
+version: 1
+sources:
+  - name: addy-agent-skills
+    glob: "~/.claude/plugins/cache/addy-agent-skills/**/skills/*/SKILL.md"
+    prefix: addy
+    triggers: triggers/addy-agent-skills.yaml
+    enabled: true
+  # - name: anthropic-skills
+  #   glob: "~/.claude/plugins/cache/claude-plugins-official/**/anthropic-skills/*/SKILL.md"
+  #   prefix: anth
+  #   triggers: triggers/anthropic-skills.yaml
+  #   enabled: true
+  # - name: superpowers
+  #   glob: "~/.claude/plugins/cache/superpowers-dev/**/skills/*/SKILL.md"
+  #   prefix: sp
+  #   triggers: triggers/superpowers.yaml
+  #   enabled: true

@@ -1,0 +1,7 @@
+version: 1
+sources:
+  - name: addy-agent-skills
+    glob: "~/.claude/plugins/cache/addy-agent-skills/agent-skills/1.0.0/skills/*/SKILL.md"
+    prefix: addy
+    triggers: triggers/addy-agent-skills.yaml
+    enabled: true

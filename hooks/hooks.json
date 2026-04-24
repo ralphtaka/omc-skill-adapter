@@ -1,0 +1,10 @@
+{
+  "SessionStart": [
+    {
+      "matcher": "*",
+      "timeoutMs": 3000,
+      "command": "node",
+      "args": ["${PLUGIN_DIR}/dist/omc-skill-adapter.mjs", "sync", "--quiet"]
+    }
+  ]
+}

@@ -1,0 +1,184 @@
+# Trigger overrides for addyosmani/agent-skills
+# Keys match slugified skill names (kebab-case from skill `name` field).
+# Values are keywords/phrases likely to appear in user messages.
+
+using-agent-skills:
+  - which skill
+  - what skill
+  - find skill
+  - discover skill
+  - agent skill
+  - skill flowchart
+
+spec-driven-development:
+  - spec
+  - specification
+  - requirements
+  - spec driven
+  - write a spec
+  - acceptance criteria
+  - define requirements
+
+planning-and-task-breakdown:
+  - plan
+  - task breakdown
+  - break down
+  - decompose
+  - subtasks
+  - work breakdown
+  - sprint plan
+
+incremental-implementation:
+  - implement
+  - build feature
+  - vertical slice
+  - incremental
+  - step by step
+  - thin slice
+
+idea-refine:
+  - idea
+  - brainstorm
+  - refine idea
+  - explore idea
+  - ideation
+  - concept
+
+frontend-ui-engineering:
+  - frontend
+  - ui component
+  - react component
+  - accessibility
+  - responsive design
+  - tailwind
+  - css layout
+
+api-and-interface-design:
+  - api design
+  - interface design
+  - endpoint
+  - rest api
+  - graphql
+  - sdk design
+  - api contract
+
+context-engineering:
+  - context engineering
+  - context window
+  - prompt engineering
+  - agent context
+  - context management
+
+source-driven-development:
+  - official docs
+  - documentation first
+  - verify against docs
+  - source driven
+  - doc verified
+  - sdk documentation
+
+test-driven-development:
+  - tdd
+  - test driven
+  - write tests first
+  - failing test
+  - red green refactor
+  - prove it
+
+browser-testing-with-devtools:
+  - browser test
+  - e2e test
+  - devtools
+  - playwright
+  - cypress
+  - chrome devtools
+  - browser automation
+
+debugging-and-error-recovery:
+  - debug
+  - error
+  - bug
+  - broken
+  - not working
+  - crash
+  - exception
+  - stack trace
+  - reproduce
+
+code-simplification:
+  - simplify
+  - clean up code
+  - reduce complexity
+  - make readable
+  - too complex
+  - over-engineered
+
+code-review-and-quality:
+  - code review
+  - review code
+  - pr review
+  - quality check
+  - review this
+  - check code
+
+security-and-hardening:
+  - security
+  - vulnerability
+  - secure
+  - owasp
+  - xss
+  - injection
+  - authentication
+  - hardening
+
+performance-optimization:
+  - performance
+  - slow
+  - optimize
+  - latency
+  - bottleneck
+  - profiling
+  - memory leak
+
+git-workflow-and-versioning:
+  - git commit
+  - git branch
+  - git workflow
+  - commit message
+  - rebase
+  - merge strategy
+  - versioning
+
+ci-cd-and-automation:
+  - ci cd
+  - pipeline
+  - github actions
+  - continuous integration
+  - automation
+  - build pipeline
+
+documentation-and-adrs:
+  - documentation
+  - adr
+  - architecture decision
+  - document this
+  - write docs
+  - decision record
+
+deprecation-and-migration:
+  - migrate
+  - migration
+  - deprecate
+  - upgrade
+  - remove old
+  - legacy code
+  - breaking change
+
+shipping-and-launch:
+  - ship
+  - launch
+  - release
+  - go live
+  - production deploy
+  - rollout
+  - pre-launch

@@ -1,0 +1,45 @@
+# Trigger overrides for superpowers-dev skills
+# Populate with skill slugs from the superpowers plugin.
+# Run: ls ~/.claude/plugins/cache/superpowers-dev/ to find version, then list skills/.
+#
+# Example entries (uncomment and adjust):
+
+# brainstorming:
+#   - brainstorm
+#   - ideate
+#   - explore options
+
+# writing-plans:
+#   - write plan
+#   - create plan
+#   - planning document
+
+# executing-plans:
+#   - execute plan
+#   - follow plan
+#   - implement plan
+
+# systematic-debugging:
+#   - systematic debug
+#   - root cause
+#   - diagnose
+
+# test-driven-development:
+#   - tdd
+#   - test first
+#   - write failing test
+
+# verification-before-completion:
+#   - verify
+#   - double check
+#   - confirm works
+
+# finishing-a-development-branch:
+#   - finish branch
+#   - ready to merge
+#   - branch complete
+
+# subagent-driven-development:
+#   - parallel agents
+#   - subagent
+#   - dispatch agents

@@ -1,0 +1,8 @@
+{
+  "name": "omc-skill-adapter",
+  "version": "0.1.0",
+  "description": "Bridges external skill collections (addy, anthropic, superpowers) into OMC skill loader — auto-syncs on session start, zero runtime dependencies",
+  "author": { "name": "Ralph Taka" },
+  "license": "MIT",
+  "hooks": "./hooks/hooks.json"
+}
